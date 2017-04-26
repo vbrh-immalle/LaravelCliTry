@@ -16,3 +16,10 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+Artisan::command('hello', function() {
+    $this->info("Hello,");
+    $this->comment("This is a comment.");
+    $this->error("This is (not a real) error.");
+    $this->question("Do you like the CLI color scheme?");
+})->describe('Say hello and demo the CLI colors');
